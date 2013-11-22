@@ -1,0 +1,22 @@
+<package>
+  <description brief="acado">
+
+     <a href="http://www.acadotoolkit.org/">ACADO toolkit</a> is a software environment and algorithm collection for automatic control and dynamic optimization. It provides a general framework for using a great variety of algorithms for direct optimal control, including model predictive control, state and parameter estimation and robust optimization. ACADO Toolkit is implemented as self-contained C++ code and comes along with user-friendly Matlab interfaces. The object-oriented design allows for convenient coupling of existing optimization packages and for extending it with user-written optimization routines.
+
+  </description>
+  <author>Wilm Decre (package author), Hans Joachim Ferreau (acado author),Boris Houska (acado author)</author>
+  <license>LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/acado</url>
+<export>
+<!--  <cpp cflags="-I${prefix}/include -I${prefix}/external_packages"
+lflags="-Wl,-rpath,${prefix}/libs -L${prefix}/libs -lqpOASES2.0
+-lqpOASESextras2.0 -lacado_acado2gnuplot -lacado_integrators
+-lacado_optimal_control -lcsparse -lacado_toolkit"/>-->
+<!--<cpp cflags="-I${prefix}/include -I${prefix}/external_packages"
+lflags="-Wl,-rpath,${prefix}/libs -L${prefix}/libs -lacado_acado2gnuplot -lacado_optimal_control -lqpOASES2.0 -lqpOASESextras2.0  -lacado_integrators -lcsparse -lacado_toolkit"/>-->
+<cpp cflags="-I${prefix}/include -I${prefix}/external_packages -I${prefix}/external_packages/qpOASES-2.0/INCLUDE -fPIC" lflags="-Wl,-rpath,${prefix}/libs -L${prefix}/libs -lacado_optimal_control -lacado_toolkit -lacado_integrators -lqpOASES2.0 -lqpOASESextras2.0 -lcsparse "/>
+</export>
+
+</package>
+
